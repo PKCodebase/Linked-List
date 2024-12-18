@@ -2,7 +2,7 @@ package com.linked_list;
 
 public class InsertFirst {
 
-    private static Node insertFirst(Node head, int data) {
+     static Node insertFirst(Node head, int data) {
         Node temp = new Node(data);
         temp.next = head;
         return temp;

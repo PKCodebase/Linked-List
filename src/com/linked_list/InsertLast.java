@@ -1,12 +1,23 @@
 package com.linked_list;
 
 public class InsertLast {
-    private static Node insertLast(Node head, int data) {
+    private static Node insertLast(Node headNode, int data) {
         Node temp = new Node(data);
-        temp.next = head;
-        return temp;
-    }  static void displayList(Node head) {
-        Node currentNode = head;
+        if(headNode==null){
+            return temp;
+        }
+
+        Node currentNode = headNode;
+        while(currentNode.next != null) {
+            currentNode=currentNode.next;
+        }
+
+        currentNode.next = temp;
+
+        return headNode;
+    }
+    static void displayList(Node headNode) {
+        Node currentNode = headNode;
         while(currentNode != null) {
             System.out.print(currentNode.data+"\t");
             currentNode=currentNode.next;
@@ -14,7 +25,6 @@ public class InsertLast {
 
         System.out.println("\n");
     }
-
     public static void main(String[] args) {
         Node head = null;
         head = insertLast(head, 10);
