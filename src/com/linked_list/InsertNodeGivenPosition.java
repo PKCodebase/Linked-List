@@ -7,6 +7,7 @@ public class InsertNodeGivenPosition {
             temp.next = headNode;
             return temp;
         }
+
         Node currentNode = headNode;
         for(int i =1;i<=position-2 && currentNode != null;i++){
             currentNode = currentNode.next;
