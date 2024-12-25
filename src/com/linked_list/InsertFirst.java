@@ -6,7 +6,8 @@ public class InsertFirst {
         Node temp = new Node(data);
         temp.next = head;
         return temp;
-    }  static void displayList(Node head) {
+    }
+    static void displayList(Node head) {
         Node currentNode = head;
         while(currentNode != null) {
             System.out.print(currentNode.data+"\t");
