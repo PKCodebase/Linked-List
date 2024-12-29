@@ -26,7 +26,7 @@ public class InsertFirst {
         //System.out.println(head);
 
         displayList(head);
-    }
+     }
 
 
 }
