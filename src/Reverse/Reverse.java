@@ -1,17 +1,33 @@
 package Reverse;
 
 public class Reverse {
-    public ListNode reverseList(ListNode head){
+    public ListNode reverseList(ListNode head) {
 
-        ListNode current = head;
-        ListNode prev = null;
-        while(current != null){
-            ListNode  nextNode = current.next;
-            current.next = prev;
-            prev = current;
-            current = nextNode;
+        //Iterative Approach
+
+
+//        ListNode current = head;
+//        ListNode prev = null;
+//        while(current != null){
+//            ListNode  nextNode = current.next;
+//            current.next = prev;
+//            prev = current;
+//            current = nextNode;
+//        }
+//        return prev;
+//    }
+
+
+        //Recursive approach
+
+        if (head == null || head.next == null) {
+            return head;
         }
-        return prev;
+
+        ListNode last = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
     }
     public void printList(ListNode head) {
         ListNode temp = head;
